@@ -1,9 +1,8 @@
-import { type VercelRequest, type VercelResponse } from '@vercel/node';
-import { fetchKurals } from './fetcher/fetch-kurals.js';
-import { renderSVG } from './renderer/render-svg.js';
-import { themes } from './renderer/theme/awesome-card.js';
-import type { CardType } from './renderer/render-svg.js';
-
+import { type VercelRequest, type VercelResponse } from "@vercel/node";
+import { fetchKurals } from "./fetcher/fetch-kurals.js";
+import { renderSVG } from "./renderer/render-svg.js";
+import { themes } from "./renderer/theme/awesome-card.js";
+import type { CardType } from "./renderer/render-svg.js";
 
 interface QueryParams {
   type: CardType;
@@ -17,7 +16,6 @@ interface QueryParams {
   symbolColor?: string;
 }
 
-
 function parseQueryParams(query: QueryParams) {
   const {
     type,
@@ -30,7 +28,7 @@ function parseQueryParams(query: QueryParams) {
     backgroundColor,
     symbolColor,
   } = query;
-  
+
   const borderBool = border !== "false" && border !== "0";
 
   const customColors = {

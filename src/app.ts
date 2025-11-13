@@ -4,10 +4,8 @@ import { renderSVG } from "./renderer/render-svg.js";
 import { themes } from "./renderer/theme/awesome-card.js";
 import type { CardType } from "./renderer/render-svg.js";
 
-
 const app: Express = express();
 app.use(express.json());
-
 
 interface QueryParams {
   type: CardType;
@@ -20,7 +18,6 @@ interface QueryParams {
   backgroundColor?: string;
   symbolColor?: string;
 }
-
 
 function parseQueryParams(query: QueryParams) {
   const {
@@ -66,7 +63,6 @@ app.get("/", (_req, res) => res.redirect("https://github.com/Sasivarnasarma/Read
 app.get("/api", (req: Request<{}, {}, {}, QueryParams>, res: Response) => {
   generateSVGResponse(req.query, res);
 });
-
 
 const PORT = Number(process.env.PORT) || 3000;
 const server = app.listen(PORT, "0.0.0.0", () => {

@@ -16,7 +16,7 @@ export const renderSVG = (
   type: CardType = "horizontal",
   theme: keyof typeof themes,
   border: boolean,
-  customColors?: CustomColors
+  customColors?: CustomColors,
 ) => {
   const color = renderTheme(theme, customColors);
 

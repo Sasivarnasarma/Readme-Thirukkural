@@ -18,7 +18,7 @@ export const themes: Record<string, Theme> = themesData;
 
 export const renderTheme = (
   theme: keyof typeof themes = getRandomTheme(),
-  customColors?: CustomColors
+  customColors?: CustomColors,
 ): Theme => {
   const baseTheme = themes[theme] || themes[getRandomTheme()];
 

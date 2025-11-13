@@ -9,7 +9,10 @@
   "routes": [
     {
       "src": "/",
-      "dest": "https://github.com/Sasivarnasarma/Readme-Thirukkural"
+      "status": 301,
+      "headers": {
+        "Location": "https://github.com/Sasivarnasarma/Readme-Thirukkural"
+      }
     },
     {
       "src": "/api",
