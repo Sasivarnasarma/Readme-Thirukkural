@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/vercel.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "https://github.com/Sasivarnasarma/Readme-Thirukkural"
+    },
+    {
+      "src": "/api",
+      "dest": "src/vercel.ts"
+    }
+  ]
+}

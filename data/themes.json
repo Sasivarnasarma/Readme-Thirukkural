@@ -1,0 +1,152 @@
+{
+  "light": {
+    "kural": "333",
+    "chapter": "2f80ed",
+    "background": "fffefe",
+    "symbol": "4c71f2"
+  },
+  "dark": {
+    "kural": "9f9f9f",
+    "chapter": "fff",
+    "background": "151515",
+    "symbol": "79ff97"
+  },
+  "chartreuse-dark": {
+    "kural": "fff",
+    "chapter": "7fff00",
+    "background": "000",
+    "symbol": "00AEFF"
+  },
+  "radical": {
+    "kural": "a9fef7",
+    "chapter": "fe428e",
+    "background": "141321",
+    "symbol": "f8d847"
+  },
+  "merko": {
+    "kural": "68b587",
+    "chapter": "abd200",
+    "background": "0a0f0b",
+    "symbol": "b7d364"
+  },
+  "gruvbox": {
+    "kural": "8ec07c",
+    "chapter": "fabd2f",
+    "background": "282828",
+    "symbol": "fe8019"
+  },
+  "tokyonight": {
+    "kural": "38bdae",
+    "chapter": "70a5fd",
+    "background": "1a1b27",
+    "symbol": "bf91f3"
+  },
+  "catppuccin": {
+    "kural": "96CDFB",
+    "chapter": "D9E0EE",
+    "background": "161320",
+    "symbol": "DDB6F2"
+  },
+  "catppuccin_latte": {
+    "kural": "179299",
+    "chapter": "4c4f69",
+    "background": "eff1f5",
+    "symbol": "8839ef"
+  },
+  "catppuccin_frappe": {
+    "kural": "81c8be",
+    "chapter": "c6d0f5",
+    "background": "303446",
+    "symbol": "ca9ee6"
+  },
+  "catppuccin_macchiato": {
+    "kural": "8bd5ca",
+    "chapter": "cad3f5",
+    "background": "24273a",
+    "symbol": "c6a0f6"
+  },
+  "catppuccin_mocha": {
+    "kural": "94e2d5",
+    "chapter": "cdd6f4",
+    "background": "1e1e2e",
+    "symbol": "cba6f7"
+  },
+  "algolia": {
+    "kural": "00ADFE",
+    "chapter": "FEFEFE",
+    "background": "050F2C",
+    "symbol": "26BB85"
+  },
+  "monokai": {
+    "kural": "EA1F6A",
+    "chapter": "CFCFC9",
+    "background": "272822",
+    "symbol": "E18905"
+  },
+  "dracula": {
+    "kural": "F8F8F2",
+    "chapter": "6272A4",
+    "background": "282A36",
+    "symbol": "FF79c6"
+  },
+  "nord": {
+    "kural": "D8DEE9",
+    "chapter": "4C566A",
+    "background": "2E3440",
+    "symbol": "88C0D0"
+  },
+  "github": {
+    "kural": "FFFFFF",
+    "chapter": "4C566A",
+    "background": "0D1117",
+    "symbol": "43C293"
+  },
+  "github_dark": {
+    "kural": "C3D1D9",
+    "chapter": "58A6FF",
+    "background": "0D1117",
+    "symbol": "1F6FEB"
+  },
+  "github_blue": {
+    "kural": "C7D5E0",
+    "chapter": "56A1F7",
+    "background": "0D1117",
+    "symbol": "F9826C"
+  },
+  "graywhite": {
+    "kural": "24292E",
+    "chapter": "24292E",
+    "background": "FFFFFF",
+    "symbol": "24292E"
+  },
+  "moonlight": {
+    "kural": "F8F8F8",
+    "chapter": "FF757F",
+    "background": "222436",
+    "symbol": "599DFF"
+  },
+  "hackerman": {
+    "kural": "00B3D6",
+    "chapter": "00B3D6",
+    "background": "000000",
+    "symbol": "00B3D6"
+  },
+  "shadow_red": {
+    "kural": "9A0000",
+    "chapter": "9A0000",
+    "background": "151515",
+    "symbol": "4F0000"
+  },
+  "shadow_green": {
+    "kural": "007A00",
+    "chapter": "007A00",
+    "background": "151515",
+    "symbol": "003D00"
+  },
+  "shadow_blue": {
+    "kural": "00779A",
+    "chapter": "00779A",
+    "background": "151515",
+    "symbol": "004490"
+  }
+}
