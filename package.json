@@ -14,8 +14,8 @@
     "vercel": "vercel --prod"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Sasivarnasarma",
+  "license": "MIT",
   "packageManager": "pnpm@10.20.0",
   "dependencies": {
     "@vercel/node": "^5.5.5",
