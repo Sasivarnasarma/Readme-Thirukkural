@@ -1,0 +1,9 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "readme-thirukkural"
+main = "src/worker.ts"
+compatibility_date = "2025-01-08"
+compatibility_flags = ["nodejs_compat"]
+
+# Uncomment to enable Workers Logs
+# [observability]
+# enabled = true
