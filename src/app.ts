@@ -1,50 +1,13 @@
 import express, { type Express, type Request, type Response } from "express";
 import { fetchKurals } from "./fetcher/fetch-kurals.js";
 import { renderSVG } from "./renderer/render-svg.js";
-import { themes } from "./renderer/theme/awesome-card.js";
-import type { CardType } from "./renderer/render-svg.js";
+import { parseQueryParams } from "./common/utils.js";
+import type { QueryParams } from "./common/types.js";
 
 const app: Express = express();
 app.use(express.json());
 
-interface QueryParams {
-  type: CardType;
-  theme: keyof typeof themes;
-  kural: number;
-  lang: "english" | "tamil";
-  border: string;
-  kuralColor?: string;
-  chapterColor?: string;
-  backgroundColor?: string;
-  symbolColor?: string;
-}
-
-function parseQueryParams(query: QueryParams) {
-  const {
-    type,
-    theme,
-    kural,
-    lang,
-    border,
-    kuralColor,
-    chapterColor,
-    backgroundColor,
-    symbolColor,
-  } = query;
-
-  const borderBool = border !== "false" && border !== "0";
-
-  const customColors = {
-    kural: kuralColor ?? "",
-    chapter: chapterColor ?? "",
-    background: backgroundColor ?? "",
-    symbol: symbolColor ?? "",
-  };
-
-  return { type, theme, kural, lang, borderBool, customColors };
-}
-
-async function generateSVGResponse(query: QueryParams, res: Response) {
+async function generateSVGResponse(query: Partial<QueryParams>, res: Response) {
   try {
     const { type, theme, kural, lang, borderBool, customColors } = parseQueryParams(query);
     const data = await fetchKurals(lang, kural);
