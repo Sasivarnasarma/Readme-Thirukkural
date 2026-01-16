@@ -48,6 +48,7 @@ Readme-Thirukkural is a tiny TypeScript service that returns SVG cards showing T
 - A local Express dev server (`src/app.ts`).
 - A Vercel serverless function (`src/vercel.ts`).
 - A Cloudflare Worker (`src/worker.ts`).
+- A Netlify Function (`src/netlify.ts`).
 
 The project keeps canonical data in `data/Thirukkural.json` and color themes in `data/themes.json`.
 
@@ -104,8 +105,9 @@ Check [`themes.md`](https://github.com/Sasivarnasarma/Readme-Thirukkural/blob/ma
 - Format: `pnpm format` — runs Prettier.
 - Build: `pnpm build` — `rimraf dist && tsc`.
 - Start production build: `pnpm start` — runs `node dist/app.js`.
-- Vercel: `pnpm vercel-dev` (local) / `pnpm vercel` (deploy).
+- Vercel: `pnpm vercel-dev` (local) / `pnpm vercel-deploy` (deploy).
 - Cloudflare Workers: `pnpm cf-dev` (local) / `pnpm cf-deploy` (deploy).
+- Netlify: `pnpm netlify-dev` (local) / `pnpm netlify-deploy` (deploy).
 
 When making code changes, run `pnpm typecheck` to catch TypeScript issues, then `pnpm format`.
 
@@ -128,7 +130,7 @@ Notes about code patterns
 - Contributions, issues, and feature requests are welcome!
 - Keep changes small and focused. One logical change per PR.
 - Run `pnpm typecheck` and `pnpm format` before opening a PR.
-- If you add or modify public API query params, update `src/app.ts`, `src/vercel.ts`, and `src/worker.ts`, and add usage examples in `README.md`.
+- If you add or modify public API query params, update `src/app.ts`, `src/vercel.ts`, `src/worker.ts`, and `src/netlify.ts`, and add usage examples in `README.md`.
 - If you add new themes or data, place them in `data/` and follow the existing JSON shape.
  
 ## Special Thanks ❤

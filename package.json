@@ -11,9 +11,11 @@
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
     "vercel-dev": "vercel dev",
-    "vercel": "vercel --prod",
+    "vercel-deploy": "vercel --prod",
     "cf-dev": "wrangler dev",
-    "cf-deploy": "wrangler deploy"
+    "cf-deploy": "wrangler deploy",
+    "netlify-dev": "netlify dev",
+    "netlify-deploy": "netlify deploy --prod"
   },
   "keywords": [],
   "author": "Sasivarnasarma",
@@ -21,12 +23,15 @@
   "packageManager": "pnpm@10.28.0",
   "dependencies": {
     "@vercel/node": "^5.5.5",
+    "@netlify/functions": "^5.1.2",
     "express": "^5.1.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260111.0",
     "@types/express": "^5.0.5",
+    "netlify-cli": "^23.13.3",
     "prettier": "^3.6.2",
+    "rimraf": "^6.1.2",
     "typescript": "^5.9.3",
     "vercel": "^48.9.1",
     "wrangler": "^4.58.0"

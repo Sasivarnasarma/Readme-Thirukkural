@@ -1,4 +1,6 @@
 import { themes } from "../renderer/theme/awesome-card.js";
+import { fetchKurals } from "../fetcher/fetch-kurals.js";
+import { renderSVG } from "../renderer/render-svg.js";
 import type { CardType } from "../renderer/render-svg.js";
 import type { ParsedParams, QueryParams } from "./types.js";
 
@@ -44,4 +46,10 @@ export function parseQueryParams(query: Partial<QueryParams>): ParsedParams {
         borderBool,
         customColors,
     };
+}
+
+export async function generateSVG(query: Partial<QueryParams>): Promise<string> {
+    const { type, theme, kural, lang, borderBool, customColors } = parseQueryParams(query);
+    const data = await fetchKurals(lang, kural);
+    return renderSVG(data, type, theme, borderBool, customColors);
 }

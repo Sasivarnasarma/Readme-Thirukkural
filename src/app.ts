@@ -1,7 +1,5 @@
 import express, { type Express, type Request, type Response } from "express";
-import { fetchKurals } from "./fetcher/fetch-kurals.js";
-import { renderSVG } from "./renderer/render-svg.js";
-import { parseQueryParams } from "./common/utils.js";
+import { generateSVG } from "./common/utils.js";
 import type { QueryParams } from "./common/types.js";
 
 const app: Express = express();
@@ -9,12 +7,11 @@ app.use(express.json());
 
 async function generateSVGResponse(query: Partial<QueryParams>, res: Response) {
   try {
-    const { type, theme, kural, lang, borderBool, customColors } = parseQueryParams(query);
-    const data = await fetchKurals(lang, kural);
+    const svg = await generateSVG(query);
 
     res.setHeader("Content-Type", "image/svg+xml");
     res.setHeader("Cache-Control", "public, max-age=60");
-    res.status(200).send(renderSVG(data, type, theme, borderBool, customColors));
+    res.status(200).send(svg);
   } catch (error) {
     console.error("Error generating SVG:", error);
     res.status(500).json({ error: "Failed to generate SVG" });

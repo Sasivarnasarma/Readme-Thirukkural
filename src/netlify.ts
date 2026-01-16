@@ -1,3 +1,4 @@
+import type { Context } from "@netlify/functions";
 import { generateSVG } from "./common/utils.js";
 import type { QueryParams } from "./common/types.js";
 
@@ -21,19 +22,8 @@ async function generateSVGResponse(query: Partial<QueryParams>): Promise<Respons
     }
 }
 
-export default {
-    async fetch(request: Request): Promise<Response> {
-        const url = new URL(request.url);
-
-        if (url.pathname === "/") {
-            return Response.redirect("https://github.com/Sasivarnasarma/Readme-Thirukkural", 302);
-        }
-
-        if (url.pathname === "/api") {
-            const queryParams = Object.fromEntries(url.searchParams) as Partial<QueryParams>;
-            return generateSVGResponse(queryParams);
-        }
-
-        return new Response("Not Found", { status: 404 });
-    },
+export default async (request: Request, _context: Context): Promise<Response> => {
+    const url = new URL(request.url);
+    const queryParams = Object.fromEntries(url.searchParams) as Partial<QueryParams>;
+    return generateSVGResponse(queryParams);
 };
