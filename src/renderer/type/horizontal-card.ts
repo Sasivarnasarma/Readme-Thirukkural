@@ -51,7 +51,7 @@ export const renderHorizontal = ({ kural, chapter, color, border }: Props) => {
   const containerStyles = getContainerStyles(themeStyles);
 
   return `
-    <svg width="600" height="auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="600" height="180" viewBox="0 0 600 180" fill="none" xmlns="http://www.w3.org/2000/svg">
       <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
           ${poppinsFontSVG}

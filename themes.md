@@ -116,4 +116,13 @@ Notes:
   
   [![shadow_blue](https://rt.sasivarnasarma.eu.org/api?theme=shadow_blue)](https://rt.sasivarnasarma.eu.org/api?theme=shadow_blue)
 
+
+- Vertical card preview
+
+<p align="center">
+  <a href="https://rt.sasivarnasarma.eu.org/api?type=vertical">
+    <img src="https://rt.sasivarnasarma.eu.org/api?type=vertical" alt="Vertical card">
+  </a>
+</p>
+
 ---
